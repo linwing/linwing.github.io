@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div id="menu">
+        <div class="item">
+            文件
+            <div class="submenu">
+                <div class="subitem" id="picker">打开文件…</div>
+                <div class="subitem" id="saveAsJpg">保存为jpg…</div>
+                <div class="subitem" id="saveAsPng">保存为png…</div>
+            </div>
+        </div>
+        <div class="item">
+            编辑
+            <div class="submenu">
+                <div class="subitem" id="undo">撤销操作</div>
+                <div class="subitem" id="redo">重做操作</div>
+            </div>
+        </div>
+        <div class="item">
+            图像
+            <div class="submenu">
+                <div class="subitem" id="clip">剪裁…</div>
+                <div class="subitem" id="scale">缩放比例为…</div>
+                <div class="subitem" id="scaleTo">缩放尺寸到…</div>
+                <div class="subitem" id="turnLeft">向左旋转90°</div>
+                <div class="subitem" id="turnRight">向右旋转90°</div>
+                <div class="subitem" id="flipX">水平翻转</div>
+                <div class="subitem" id="flipY">垂直翻转</div>
+            </div>
+        </div>
+    </div>
+    <div id="view"></div>
+    <div id="mask">
+        <div id="maskPrompt">
+            <div id="scaleForm">
+                <label>缩放比例为：</label>
+                <input id="scaleInput" type="number" min="0.01" max="100" step="0.01" value="0.5" />
+            </div>
+            <div id="scaleToForm">
+                <div class="oneInput">
+                    <label>缩放宽到：</label>
+                    <input id="scaleToInputW" type="number" min="1" max="10000" step="1" />
+                </div>
+                <div class="oneInput">
+                    <label>缩放高到：</label>
+                    <input id="scaleToInputH" type="number" min="1" max="10000" step="1" />
+                </div>
+            </div>
+            <div id="clipForm">
+                <div class="oneInput">
+                    <label>剪裁起点X坐标：</label>
+                    <input id="clipX" type="number" min="0" max="10000" step="1" />
+                </div>
+                <div class="oneInput">
+                    <label>剪裁起点Y坐标：</label>
+                    <input id="clipY" type="number" min="0" max="10000" step="1" />
+                </div>
+                <div class="oneInput">
+                    <label>剪裁宽度：</label>
+                    <input id="clipW" type="number" min="1" max="10000" step="1" />
+                </div>
+                <div class="oneInput">
+                    <label>剪裁高度：</label>
+                    <input id="clipH" type="number" min="1" max="10000" step="1" />
+                </div>
+            </div>
+            <div id="saveAsPngForm">
+                <label>文件名：</label>
+                <input id="saveAsPngInput" type="text" value="新图片" />
+            </div>
+            <div id="saveAsJpgForm">
+                <div class="oneInput">
+                    <label>文件名：</label>
+                    <input id="saveAsJpgName" type="text" value="新图片" />
+                </div>
+                <div class="oneInput">
+                    <label>图片质量</label>
+                    <input id="saveAsJpgQuality" type="number" min="0.01" max="1" step="0.01" value="0.92" />
+                </div>
+            </div>
+            <div id="maskBtns">
+                <button id="maskCancel">取消</button>
+                <button id="maskArrow">好</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
